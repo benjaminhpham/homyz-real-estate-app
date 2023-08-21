@@ -4,6 +4,8 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 
 import authRoute from "./routes/userRoutes";
+import residencyRoute from "./routes/residencyRoutes";
+
 dotenv.config();
 
 const app = express();
@@ -15,6 +17,7 @@ app.use(cookieParser());
 app.use(cors());
 
 app.use("/api/users", authRoute);
+app.use("/api/residency", residencyRoute);
 
 app.listen(PORT, () => {
   console.log(`Server is running on ${PORT}`);

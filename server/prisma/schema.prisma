@@ -24,11 +24,12 @@ model Residency {
   id          String   @id @default(auto()) @map("_id") @db.ObjectId
   title       String
   description String
+  price       Int
   address     String
   city        String
   country     String
   image       String
-  facilities  Json[]
+  facilities  Json
   userEmail   String
   owner       User     @relation("Owner", fields: [userEmail], references: [email])
   createdAt   DateTime @default(now())
