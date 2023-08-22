@@ -1,7 +1,6 @@
 import { HiLocationMarker } from "react-icons/hi";
 import CountUp from "react-countup";
 
-import "../../index.css";
 import "./Hero.css";
 
 export default function Hero() {
