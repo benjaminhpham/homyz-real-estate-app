@@ -7,7 +7,7 @@ export default function GetStarted() {
         <div className="flexColCenter inner-container">
           <span className="primaryText">Get Started with Homyz</span>
           <span className="secondaryText">
-            Subscribe and Find Super Attractive Price Quotes from
+            Subscribe and Find Super Attractive Price Quotes from Us
             <br />
             Find Your Residence Soon
           </span>
