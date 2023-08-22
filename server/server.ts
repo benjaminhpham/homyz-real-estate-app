@@ -17,7 +17,7 @@ app.use(cookieParser());
 app.use(cors());
 
 app.use("/api/users", authRoute);
-app.use("/api/residency", residencyRoute);
+app.use("/api/residencies", residencyRoute);
 
 app.listen(PORT, () => {
   console.log(`Server is running on ${PORT}`);

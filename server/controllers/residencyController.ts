@@ -1,6 +1,29 @@
-import express, { Request, Response } from "express";
+import { Request, Response } from "express";
 import asyncHandler from "express-async-handler";
-import { createResidencyDB } from "../db/residencyDB";
+import {
+  createResidencyDB,
+  getResidenciesDB,
+  getResidencyDB,
+} from "../db/residencyDB";
+
+export const getAllResidencies = asyncHandler(
+  async (req: Request, res: Response) => {
+    const residencies = await getResidenciesDB();
+    res.send(residencies);
+  }
+);
+
+export const getResidency = asyncHandler(
+  async (req: Request, res: Response) => {
+    const { id } = req.params;
+    try {
+      const residency = await getResidencyDB(id);
+      res.send(residency);
+    } catch (err: any) {
+      throw new Error(err.message);
+    }
+  }
+);
 
 export const createResidency = asyncHandler(
   async (req: Request, res: Response) => {
