@@ -39,7 +39,7 @@ export default function Value() {
             preExpanded={[0]}
           >
             {data.map((item, index) => {
-              const [className, setClassName] = useState("");
+              const [className, setClassName] = useState<string>("");
 
               return (
                 <AccordionItem
