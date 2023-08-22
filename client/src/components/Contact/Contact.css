@@ -38,7 +38,7 @@
 
 .mode .button {
   width: 100%;
-  background-color: var(--lightBlue);
+  background: var(--lightBlue);
   color: var(--blue);
   font-size: 0.9rem;
   font-weight: 600;
