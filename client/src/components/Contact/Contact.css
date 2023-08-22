@@ -10,6 +10,10 @@
   width: 100%;
 }
 
+.c-right .image-container {
+  margin: 0 auto;
+}
+
 .c-left {
   gap: 0.5rem;
 }
