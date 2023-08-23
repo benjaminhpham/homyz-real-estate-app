@@ -14,6 +14,8 @@ import data from "../../utils/accordion";
 import { useState } from "react";
 
 export default function Value() {
+  const [className, setClassName] = useState<string>("");
+
   return (
     <section className="v-wrapper">
       <div className="paddings innerWidth flexCenter v-container">
@@ -39,8 +41,6 @@ export default function Value() {
             preExpanded={[0]}
           >
             {data.map((item, index) => {
-              const [className, setClassName] = useState<string>("");
-
               return (
                 <AccordionItem
                   className={`accordionItem ${className}`}

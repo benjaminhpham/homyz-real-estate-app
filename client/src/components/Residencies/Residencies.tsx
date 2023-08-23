@@ -4,6 +4,7 @@ import "swiper/css";
 import "./Residencies.css";
 import data from "../../utils/slider.json";
 import { sliderSettings } from "../../utils/common";
+import PropertyCard from "../PropertyCard/PropertyCard";
 
 export default function Residencies() {
   return (
@@ -18,17 +19,7 @@ export default function Residencies() {
           <SliderButton />
           {data.map((card, index) => (
             <SwiperSlide key={index}>
-              <div className="flexColStart r-card">
-                <img src={card.image} alt="home" />
-
-                <span className="secondaryText r-price">
-                  <span style={{ color: "orange" }}>$</span>
-                  <span>{card.price}</span>
-                </span>
-
-                <span className="primaryText">{card.name}</span>
-                <span className="secondaryText">{card.detail}</span>
-              </div>
+              <PropertyCard card={card} />
             </SwiperSlide>
           ))}
         </Swiper>
